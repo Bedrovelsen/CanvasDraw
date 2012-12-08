@@ -1,0 +1,63 @@
+<!--
+Author:
+File: 
+Date Modified: 
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	
+		<!--Link CSS-->
+		<link href="../CSS/style.css" rel="stylesheet" type="text/css">
+		<!--End Link CSS-->
+			
+		<title></title>
+			
+		<!--Javascript Libraries-->
+		<script type="text/javascript" src="../JS_Libraries/jquery.js"></script>
+		<script type="text/javascript" src="../JS_Libraries/jcanvas.js"></script>
+		<!--End Javascript Libraries-->
+		
+		<!--Scripting Start-->
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				var grad = $("#myCanvas").createGradient({
+					x1: 0, y1: 20,
+					x2: 0, y2: 80,
+					c1: "rgb(0,0,0)",
+					c2: "#0f0",
+					c3: "blue"
+				});
+				$("#myCanvas").drawArc({
+					fillStyle: grad,
+					shadowColor: "#333",
+					shadowBlue: 7,
+					shadowX: -10, shadowY: 6,
+					x: 100, y: 100,
+					radius: 50
+				})
+				.drawArc({
+					fillStyle: "#36b",
+					shadowColor: "#000",
+					shadowBlur: 10,
+					shadowX: -5, shadowY: 5,
+					x: 300, y: 150,
+					radius: 50
+				});
+			
+			});//End document ready
+			
+		</script>
+		<!--Scripting End-->
+		
+	</head>
+	
+	<body>
+		<canvas id="myCanvas" width="500" height="250"></canvas>
+	</body>
+
+</html>
