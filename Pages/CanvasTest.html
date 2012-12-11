@@ -33,20 +33,25 @@ Date Modified:
 					c3: "blue"
 				});
 				$("#myCanvas").drawArc({
+					layer: true,
+					ccw: true,
 					fillStyle: grad,
 					shadowColor: "#333",
 					shadowBlue: 7,
 					shadowX: -10, shadowY: 6,
 					x: 100, y: 100,
-					radius: 50
+					radius: 50,
+					draggable: true
 				})
 				.drawArc({
+					layer: true,
 					fillStyle: "#36b",
 					shadowColor: "#000",
 					shadowBlur: 10,
 					shadowX: -5, shadowY: 5,
 					x: 300, y: 150,
-					radius: 50
+					radius: 50,
+					draggable: true
 				});
 			
 			});//End document ready
